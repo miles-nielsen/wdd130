@@ -1,0 +1,29 @@
+img {
+    width: 300px;
+}
+body {
+    background-color: hsla(197, 100%, 50%, 0.858);
+    text-align: center;
+    margin: 0;
+
+}
+/* navigation */
+header, footer {
+    background-color: white;
+    padding: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: black
+}
+nav a:hover {
+    text-decoration: none;
+    color: purple
+}
+p{
+    font-size: 1.5em;
+}
+
+#second {
+    font-size: 3em;
+}
