@@ -1,0 +1,32 @@
+#card {
+    background-color: #008DB1;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border-color: #004e63;
+    border-style: solid;
+    border-width: 2px;
+}
+.prophet {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 10px;
+    border-color: #FFFFFE;
+    border-style: solid;
+    border-width: 2px;
+
+}
+.text1 {
+    color: #FFFFFE;
+}
+.text2 {
+    color: #FFFFFE;
+}
+p {
+    color: #FFD783;
+    text-align: center;
+}
+ul {
+    color: #FFFFFE;
+}
