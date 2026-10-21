@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Favorite Devotionals</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-image">
+        <h1>My Favorite<br>Devotionals</h1>
+      </div>
+    </header>
+    <main>
+      <div class="content-box">
+        <!-- Add your devotional content here -->
+         A table for my favorite devotionals
+         <table style="width:100%">
+           <tr>
+             <th>Speaker</th>
+             <th>Title</th>
+             <th>Location</th>
+             <th>Year</th>
+           </tr>
+           <tr>
+             <td>Elder and Sister Bednar</td>
+             <td>BYU-I 25th Anniversary</td>
+             <td>BYU-Idaho Devotional Center</td>
+             <td>2026</td>
+           </tr>
+         </table>
+         <form action="#">
+          <label for="speaker">Speaker:</label>
+          <input type="text" id="speaker" name="speaker" required>
+
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required>
+
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required>
+
+          <label for="year">Year:</label>
+          <input type="number" id="year" name="year" required>
+
+          <input type="submit" value="Submit">
+         </form>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
