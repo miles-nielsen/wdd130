@@ -1,1 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+header {
+    background-color: beige;
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+.logo {
+    width: 100%;
+    height: auto;
+    grid-column: 1 / 2;
+}
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: space-around;
+}
+
+footer {
+    background-color: beige;
+    display: grid;
+    grid-row: 6/7;
+}
+#hero {
+    justify-content: center;
+}
