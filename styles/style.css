@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+    background-color: #05b5b1;
+}
 header {
-    background-color: beige;
+    background-color: #4377f1;
     display: grid;
     grid-template-columns: 200px auto;
 }
@@ -17,11 +20,50 @@ nav {
     justify-items: space-around;
 }
 
+.nt {
+    font-family: Outfit, sans-serif;
+    color: black;
+    background-color: #3A68D1;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.nt:hover {
+    color: rgba(25, 25, 25, 0.77);
+    transform: scale(1.05);
+}
 footer {
-    background-color: beige;
+    background-color: #4377f1;
     display: grid;
     grid-row: 6/7;
 }
 #hero {
-    justify-content: center;
+    display: grid;
+    justify-items: center;
+}
+#hero-msg {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    font-family: JetBrains Mono, sans-serif;
+    color: #142a13
+}
+.msg {
+    display: grid;
+    justify-items: center;
+}
+h3 {
+    font-family: Outfit, sans-serif;
+}
+#text1 {
+    font-family: Fraunces, serif;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+#footer {
+    font-family: Lora, serif;
+    padding-left: 25px;
+    color: black;
+    text-align: center;
 }
