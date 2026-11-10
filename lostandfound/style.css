@@ -6,14 +6,12 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f7f8fa;
+  background: #fffbe8;
   color: #252a34;
   line-height: 1.6;
 }
 
-/* Header */
-
-.header {
+/* .header {
   background: white;
   border-bottom: 1px solid #e8e9ed;
 }
@@ -30,7 +28,7 @@ body {
 .header h1 {
   font-size: 23px;
   font-weight: 700;
-}
+} */
 
 nav {
   display: flex;
@@ -74,7 +72,7 @@ nav a:hover {
 /* Form */
 
 .form-section {
-  background: white;
+  background: #EDEDE3;
   border: 1px solid #e8e9ed;
   border-radius: 12px;
   padding: 30px;
@@ -280,15 +278,6 @@ textarea {
   font-size: 14px;
 }
 
-/* Footer */
-
-footer {
-  text-align: center;
-  padding: 25px;
-  color: #858c98;
-  font-size: 13px;
-  border-top: 1px solid #e8e9ed;
-}
 
 /* Mobile */
 
@@ -309,4 +298,57 @@ footer {
   .form-section {
     padding: 20px;
   }
+}
+header {
+    background: #5D7259;
+    color: #FFFBE8;
+    border-bottom: 2px solid #A0AA92;
+}
+
+/* Correctly target the container inside the header */
+header .container.inner {
+    width: min(var(--container-width), calc(100% - 100px));
+    max-width: var(--container-width);
+    min-height: 57px;
+    margin-inline: auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+/* Footer */
+
+footer {
+    background: var(--green-light);
+    min-height: 59px;
+    padding-inline: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+footer p {
+    margin: 0;
+    color: var(--green-gray);
+    font-size: 12px;
+}
+
+footer nav {
+    display: flex;
+    gap: 18px;
+}
+
+footer a {
+    margin-left: 0;
+    color: var(--green-dark);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

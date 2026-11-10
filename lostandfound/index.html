@@ -10,12 +10,23 @@
 <body>
 
   <header class="header">
-    <div class="header-content">
-      <h1>Lost & Found</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#submit">Report an Item</a>
-        <a href="#listings">Browse Items</a>
+    <div class="container inner">
+      <a class="brand" href="index.html" aria-label="Lost and Found home">
+        <img class ="brand-mark" src="images/Logo.png">
+        <span><span class="site-name">Dastardly Dinos</span> Lost & Found</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="report.html">Report Lost Item</a>
+        <a href="found.html">Found Items</a>
+        <a href="instructions.html">How to Claim</a>
+        <a href="about.html">About / Contact / FAQ</a>
       </nav>
     </div>
   </header>
@@ -112,87 +123,15 @@
   </main>
 
   <footer>
-    <p>Lost & Found — Helping belongings find their way home.</p>
+     <p>© <span id="currentYear"></span> Dastardly Dinos</p>
+      <nav aria-label="Footer navigation">
+        <a href="mailto:lostandfound@email.com">Contact</a>
+        <a href="#how-it-works">FAQ</a>
+        <a href="#how-it-works">Claim policy</a>
+      </nav>
   </footer>
 
-  <script>
-    const form = document.getElementById("itemForm");
-    const imageInput = document.getElementById("image");
-    const preview = document.getElementById("imagePreview");
-    const listingContainer = document.getElementById("listingContainer");
-
-    let selectedImage = null;
-
-    imageInput.addEventListener("change", function() {
-      const file = this.files[0];
-
-      if (!file) return;
-
-      if (!file.type.startsWith("image/")) {
-        alert("Please select an image.");
-        this.value = "";
-        return;
-      }
-
-      if (file.size > 5 * 1024 * 1024) {
-        alert("Please select an image smaller than 5 MB.");
-        this.value = "";
-        return;
-      }
-
-      selectedImage = file;
-      preview.src = URL.createObjectURL(file);
-      preview.style.display = "block";
-    });
-
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      const title = document.getElementById("title").value.trim();
-      const description = document.getElementById("description").value.trim();
-      const type = document.querySelector('input[name="type"]:checked').value;
-
-      if (!selectedImage) {
-        alert("Please upload an image.");
-        return;
-      }
-
-      // Temporary front-end preview.
-      // Firebase integration will replace this section.
-
-      const card = document.createElement("div");
-      card.className = "listing-card";
-
-      const image = document.createElement("img");
-      image.src = URL.createObjectURL(selectedImage);
-      image.alt = title;
-
-      const details = document.createElement("div");
-      details.className = "listing-details";
-
-      const badge = document.createElement("span");
-      badge.className = "listing-badge";
-      badge.textContent = type;
-
-      const heading = document.createElement("h3");
-      heading.textContent = title;
-
-      const text = document.createElement("p");
-      text.textContent = description;
-
-      details.append(badge, heading, text);
-      card.append(image, details);
-
-      const emptyMessage = listingContainer.querySelector(".empty-message");
-      if (emptyMessage) emptyMessage.remove();
-
-      listingContainer.prepend(card);
-
-      form.reset();
-      preview.style.display = "none";
-      selectedImage = null;
-    });
-  </script>
+  
 
 </body>
 </html>
